@@ -7,6 +7,10 @@ body{
 p{
   margin: 0px;
 }
+a {
+  color: black; /* blue colors for links too */
+  text-decoration: none; /* no underline */
+}
 
 
 
