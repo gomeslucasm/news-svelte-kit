@@ -21,15 +21,15 @@
 </script>
 
 <div class="list">
-  {#each news as { title, category }}
+  {#each news as { title, category, slug, id }}
     <div class="item">
-      <NewsItem {title} {category} />
+      <NewsItem {title} {category} {slug} {id} />
     </div>
   {/each}
 </div>
 
 <style>
-  .list{
+  .list {
     margin-top: 4rem;
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -37,21 +37,20 @@
     grid-auto-flow: column;
     grid-template-rows: 1fr 1fr;
   }
-  @media (max-width: 991.98px) { 
-    .list{
+  @media (max-width: 991.98px) {
+    .list {
       margin-top: 2rem;
       grid-template-rows: 1fr 1fr 1fr 1fr;
       grid-template-columns: 50% 50%;
     }
-   }
-  @media (max-width: 768px) { 
-    .list{
+  }
+  @media (max-width: 768px) {
+    .list {
       grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 100%;
     }
-    
   }
-  .item{
-    padding: .5rem;
+  .item {
+    padding: 0.5rem;
   }
 </style>

@@ -1,16 +1,21 @@
 <script>
+  import { makeSlug } from '$lib/utils'
   import { CategoryName } from '$lib/category-name'
 
   export let title
   export let category
+  export let slug
+  export let id
 </script>
 
-<div class="headline-container">
-  <CategoryName categoryName={category} />
-  <span class="headline-text">
-    {title}
-  </span>
-</div>
+<a href={`/${makeSlug(id)(slug)}`}>
+  <div class="headline-container">
+    <CategoryName categoryName={category} />
+    <span class="headline-text">
+      {title}
+    </span>
+  </div>
+</a>
 
 <style>
   .headline-container {

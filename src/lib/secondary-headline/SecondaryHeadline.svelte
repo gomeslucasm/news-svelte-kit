@@ -1,18 +1,23 @@
 <script>
+  import { makeSlug } from '$lib/utils'
   import { CategoryName } from '$lib/category-name'
 
   export let title
   export let category
   export let poster
+  export let slug
+  export let id
 </script>
 
-<div class="secondary-headline-container">
-  <img src={poster} alt={`Imagem da notícia: ${title}`}/>
-  <CategoryName categoryName={category} />
-  <p>
-    {title}
-  </p>
-</div>
+<a href={`/${makeSlug(id)(slug)}`}>
+  <div class="secondary-headline-container">
+    <img src={poster} alt={`Imagem da notícia: ${title}`} />
+    <CategoryName categoryName={category} />
+    <p>
+      {title}
+    </p>
+  </div>
+</a>
 
 <style>
   .secondary-headline-container {
@@ -21,7 +26,7 @@
     width: 100%;
     row-gap: 1rem;
   }
-  img{
+  img {
     border-radius: 10px;
   }
   p {
