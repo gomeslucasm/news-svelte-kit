@@ -35,6 +35,7 @@
     grid-template-columns: 25% 25% 25% 25%;
     width: 100%;
     grid-auto-flow: column;
+    grid-template-rows: 1fr 1fr;
   }
   .item{
     padding: .5rem;
