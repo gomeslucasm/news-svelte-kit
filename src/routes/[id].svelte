@@ -1,3 +1,11 @@
+<script>
+
+  export let news
+
+  $: console.log('news = ', news)
+
+</script>
+
 <a href="/" id="return-button">
   <img id="arrow" src="arrow-left.svg" alt="</div>" />
 </a>

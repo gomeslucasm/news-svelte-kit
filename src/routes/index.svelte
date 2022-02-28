@@ -33,9 +33,9 @@
       <Headline {...headline} />
     </div>
 
-    {#each secondaryHeadlines as { title, poster, category }}
+    {#each secondaryHeadlines as { title, poster, category, slug, id }}
       <div class="headline">
-        <SecondaryHeadline {title} {poster} {category} />
+        <SecondaryHeadline {title} {poster} {category} {slug} {id} />
       </div>
     {/each}
   </div>
