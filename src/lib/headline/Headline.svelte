@@ -8,7 +8,7 @@
   export let id
 </script>
 
-<a href={`/${makeSlug(id)(slug)}`}>
+<a sveltekit:prefetch href={`/${makeSlug(id)(slug)}`}>
   <div class="headline-container">
     <CategoryName categoryName={category} />
     <span class="headline-text">
