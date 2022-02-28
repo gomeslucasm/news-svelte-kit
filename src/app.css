@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap');
+
+
+body{
+  margin: 0px;
+}
+p{
+  margin: 0px;
+}
+
+
+
+.red {
+  --color: #ff2d2d;
+}
+.blue {
+  --color: #24538b;
+}
+.green {
+  --color: #248b28;
+}

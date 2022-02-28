@@ -1,0 +1,1 @@
+export {default as SecondaryHeadline} from './SecondaryHeadline.svelte'
