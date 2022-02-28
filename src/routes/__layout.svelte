@@ -6,7 +6,9 @@
   <div id="return-button">
     <slot name="return-button" />
   </div>
-  <span> SVEN NEWS </span>
+  <a href="/">
+    <span> SVEN NEWS </span>
+  </a>
 </div>
 
 <slot />
