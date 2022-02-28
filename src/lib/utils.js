@@ -1,4 +1,4 @@
-import { cond, split, last, pipe, head, equals, not, when, concat, tail } from 'ramda'
+import { cond, split, last, pipe, head, equals, not, when, concat, tail, prop } from 'ramda'
 
 const BASE_URL = 'https://apimock.sevn.technology'
 
@@ -12,13 +12,30 @@ const makeUrl = pipe(
 )
 
 const parseId = pipe(
-  split('/'),
+  split('-'),
   last,
 )
+
+const makeNewsDetailUrl = pipe(
+  prop('id'),
+  parseId,
+  (id) => makeUrl(`/news/articles/${id}`),
+)
+
+const notSlugId = (id) => pipe(
+  parseId,
+  (x) => Number(x),
+  equals(id),
+  not,
+)
+
+const putIdOnSlug = (id) => (slug) => `${slug}-${id}`
+
+const makeSlug = (id) => when(notSlugId(id), putIdOnSlug(id))
 
 const parseHeadlines = (x) => ({
   headline: head(x),
   secondaryHeadlines: tail(x),
 })
 
-export { BASE_URL, parseId, makeUrl, parseHeadlines }
+export { BASE_URL, parseId, makeUrl, parseHeadlines, makeNewsDetailUrl, makeSlug }
