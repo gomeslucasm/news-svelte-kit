@@ -44,19 +44,48 @@
 </div>
 
 <style>
-	.headline{
-		width: 25%;
-		padding: 0px .5rem;
-	}
-	.principal{
-		width: 50%;
-	}
+  .headline {
+    width: 25%;
+    padding: 0px 0.5rem;
+  }
+  .principal {
+    width: 50%;
+  }
+
   #headlines {
     display: flex;
   }
   .page-container {
-    margin: 50px;
-    margin-top: 32px;
-    margin-bottom: 69px;
+    margin: 2.5rem;
+  }
+
+  @media (max-width: 991.98px) and (min-width: 768px) {
+    .headline {
+      width: 45%;
+    }
+
+    .principal {
+      width: 100%;
+    }
+    #headlines {
+      row-gap: 2rem;
+      flex-wrap: wrap;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .page-container {
+      margin: 1rem;
+    }
+
+    #headlines {
+      display: flex;
+      row-gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .headline {
+      width: 100%;
+    }
   }
 </style>

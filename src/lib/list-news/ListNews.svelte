@@ -37,6 +37,20 @@
     grid-auto-flow: column;
     grid-template-rows: 1fr 1fr;
   }
+  @media (max-width: 991.98px) { 
+    .list{
+      margin-top: 2rem;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 50% 50%;
+    }
+   }
+  @media (max-width: 768px) { 
+    .list{
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 100%;
+    }
+    
+  }
   .item{
     padding: .5rem;
   }
