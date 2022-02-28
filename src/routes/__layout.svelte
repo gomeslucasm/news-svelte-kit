@@ -7,7 +7,7 @@
     <slot name="return-button" />
   </div>
   <a href="/">
-    <span> SVEN NEWS </span>
+    SVEN NEWS
   </a>
 </div>
 
@@ -34,7 +34,7 @@
     justify-content: center;
     cursor: pointer;
   }
-  span {
+  a {
     margin: auto;
     font-weight: 700;
     line-height: 29.9px;
